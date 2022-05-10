@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="ehrs-rle"/>
+  <url value="http://hl7.org/fhir/uv/ehrs-rle/ImplementationGuide/ehrs-rle"/>
+  <version value="0.1.0"/>
+  <name value="EHRS Functional model - Record Lifecycle Events"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <publisher value="Health Level Seven, Int&#39;l - Electronic Health Record work group"/>
+  <packageId value="hl7.fhir.uv.ehrs-rle"/>
+  <fhirVersion value="4.0.1"/>
+  <definition>
+    <!-- <resource>
+      <exampleBoolean value="true"/>
+      <name value="EHRS FM Record Lifecycle Event"/>
+      <description value="System which records information about EHR events"/>
+      <reference>
+        <reference value="CapabilityStatement/conformance-ehrs-rle"/>
+      </reference>
+    </resource> -->
+    <page>
+      <!-- The root will always be toc.html - the template will force it if you don't do it -->
+      <nameUrl value="toc.html"/>
+      <title value="Table of Contents"/>
+      <generation value="html"/>
+     <page>
+        <nameUrl value="index.html"/>
+        <title value="Home Page"/>
+        <generation value="html"/>
+      </page>
+      <page>
+        <nameUrl value="registry.html"/>
+        <title value="Registry"/>
+      <generation value="html"/>
+    </page>
+    </page>
+    <!-- copyright year is a mandatory parameter -->
+    <parameter>
+      <code value="copyrightyear"/>
+      <value value="2022+"/>
+    </parameter>
+    <!-- releaselabel should be the ballot status for HL7-published IGs. -->
+    <parameter>
+      <code value="releaselabel"/>
+      <value value="CI Build"/>
+    </parameter>
+  </definition>
+</ImplementationGuide>
