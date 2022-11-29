@@ -2,12 +2,32 @@
 
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="ehrs-rle"/>
+	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+		<valueCode value="informative"/>
+	</extension>
+	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+		<valueInteger value="1"/>
+	</extension>
   <url value="http://hl7.org/fhir/uv/ehrs-rle/ImplementationGuide/ehrs-rle"/>
   <version value="0.1.0"/>
-  <name value="EHRS Functional model - Record Lifecycle Events"/>
-  <status value="draft"/>
+  <name value="EHRSFunctionalModelRecordLifecycleEventsIG"/>
+  <title value="EHRS Functional Model - Record Lifecycle Events Implementation Guide"/>
+  <status value="active"/>
   <experimental value="false"/>
-  <publisher value="Health Level Seven, Int&#39;l - Electronic Health Record work group"/>
+  <publisher value="Health Level Seven International - Electronic Health Record Work Group"/>
+	<contact>
+		<telecom>
+			<system value="url"/>
+			<value value="http://www.hl7.org/Special/committees/ehr"/>
+		</telecom>
+	</contact>
+	<description value="EHRS Functional Model - Record Lifecycle Events - FHIR Implementation Guide"/>
+	<jurisdiction>
+		<coding>
+			<system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+			<code value="001"/>
+		</coding>
+	</jurisdiction>
   <packageId value="hl7.fhir.uv.ehrs-rle"/>
   <fhirVersion value="4.0.1"/>
   <definition>
@@ -29,11 +49,6 @@
         <title value="Home Page"/>
         <generation value="html"/>
       </page>
-      <page>
-        <nameUrl value="registry.html"/>
-        <title value="Registry"/>
-      <generation value="html"/>
-    </page>
     </page>
     <!-- copyright year is a mandatory parameter -->
     <parameter>
@@ -43,7 +58,7 @@
     <!-- releaselabel should be the ballot status for HL7-published IGs. -->
     <parameter>
       <code value="releaselabel"/>
-      <value value="CI Build"/>
+      <value value="Informative Release 1"/>
     </parameter>
   </definition>
 </ImplementationGuide>

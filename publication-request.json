@@ -1,0 +1,13 @@
+{
+    "package-id" : "hl7.fhir.uv.ehrs-rle",
+    "version" : "0.1.0",
+    "path" : "http://hl7.org/fhir/uv/ehrs-rle/R1",
+    "milestone" : true,
+    "status" : "informative",
+    "sequence" : "Informative Release 1",
+    "desc" : "EHRS Functional Model - Record Lifecycle Events - FHIR Implementation Guide",
+    "descmd" : "EHRS Functional Model - Record Lifecycle Events - FHIR Implementation Guide",
+    "title" : "EHRS Functional Model - Record Lifecycle Events Implementation Guide",
+    "category" : "Mapping to Other Standards",
+    "introduction": "This implementation guide describes the expected capabilities for an Electronic Health Record System (EHR-S) that intends to adhere to the ISO/HL7 10781 Electronic Health Record System Functional Model Release 2 which covers the logging of record lifecycle events."
+  }

@@ -950,7 +950,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">name</Data></Cell>
-    <Cell ss:StyleID="s75"><Data ss:Type="String">EHRS FM Record Lifecycle Event - Audit Event</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">EHRSFunctionalModelRecordLifecycleEventsAuditEvent</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">author.name</Data></Cell>
@@ -958,12 +958,12 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">author.reference</Data></Cell>
-    <Cell ss:StyleID="s76" ss:HRef="http://hl7.org/special/committees/ehr.html"><Data
-      ss:Type="String">http://hl7.org/special/committees/ehr.html</Data></Cell>
+    <Cell ss:StyleID="s76" ss:HRef="http://hl7.org/special/committees/ehr"><Data
+      ss:Type="String">http://hl7.org/special/committees/ehr</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell ss:StyleID="s74"><Data ss:Type="String">code</Data></Cell>
-    <Cell ss:StyleID="s77"/>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">title</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">EHRS Functional Model - Record Lifecycle Event - Audit Event</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="69.9375">
     <Cell ss:StyleID="s74"><Data ss:Type="String">description</Data></Cell>
@@ -995,8 +995,8 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">extension.uri</Data></Cell>
-    <Cell ss:StyleID="s81" ss:HRef="http://hl7.org/fhir/StructureDefinition/ehrsrle-auditevent-"><Data
-      ss:Type="String">http://hl7.org/fhir/StructureDefinition/ehrsrle-auditevent-</Data></Cell>
+    <Cell ss:StyleID="s81" ss:HRef="http://hl7.org/fhir/uv/ehrs-rle"><Data
+      ss:Type="String">http://hl7.org/fhir/uv/ehrs-rle</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s82"><Data ss:Type="String">introduction</Data></Cell>
