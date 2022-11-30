@@ -49,6 +49,11 @@
         <title value="Home Page"/>
         <generation value="html"/>
       </page>
+			<page>
+				<nameUrl value="add.html"/>
+				<title value="Addenda"/>
+				<generation value="markdown"/>
+			</page>    
     </page>
     <!-- copyright year is a mandatory parameter -->
     <parameter>
