@@ -2,7 +2,7 @@
     "package-id" : "hl7.fhir.uv.ehrs-rle",
     "version" : "1.0.0-ballot",
     "path" : "http://hl7.org/fhir/uv/ehrs-rle/2023Jan",
-    "milestone" : true,
+    "milestone" : false,
     "status" : "informative",
     "sequence" : "Informative Release 1",
     "ci-build": "https://build.fhir.org/ig/HL7/ehrs-rle-ig/",
