@@ -5,7 +5,7 @@
     "milestone" : false,
     "status" : "informative",
     "sequence" : "Informative Release 1",
-    "ci-build": "https://build.fhir.org/ig/HL7/ehrs-rle-ig/",
+    "ci-build": "https://build.fhir.org/ig/HL7/ehrs-rle-ig",
     "desc" : "EHRS Functional Model - Record Lifecycle Events - FHIR Implementation Guide",
     "descmd" : "EHRS Functional Model - Record Lifecycle Events - FHIR Implementation Guide",
     "title" : "EHRS Functional Model - Record Lifecycle Events Implementation Guide",
