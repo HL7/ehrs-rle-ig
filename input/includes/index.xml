@@ -137,7 +137,7 @@
       <tr>
         <td>11</td>
         <td>Pseudonymize</td>
-        <td>v</td>
+        <td>Causes the system to remove record entry content to reduce the association between a set of identifying data and the data subject in a way that may be reversible.</td>
       </tr>
       <tr>
         <td>12</td>
