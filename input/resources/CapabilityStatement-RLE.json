@@ -1,0 +1,79 @@
+{
+    "resourceType" : "CapabilityStatement",
+    "id" : "conformance-ehrs-rle",
+    "url" : "http://hl7.org/fhir/uv/ehrs-rle/CapabilityStatement/conformance-ehrs-rle",
+    "name" : "EHRSFunctionalModelRecordLifecycleEventsCapabilityStatement",
+    "title" : "EHRS Functional Model - Record Lifecycle Events - Capability Statement",
+    "status" : "draft",
+    "date" : "2014-12-06",
+    "publisher" : "Health Level Seven International - Electronic Health Record Work Group",
+    "contact" : [
+      {
+        "telecom" : [
+          {
+            "system" : "url",
+            "value" : "http://www.hl7.org/Special/committees/ehr"
+          }
+        ]
+      }
+    ],
+    "description" : "This profile defines the expected capabilities of an ''Electronic Health Record System'' when conforming to the EHRS functional model's Record Lifecycle specification.",
+    "jurisdiction" : [
+      {
+        "coding" : [
+          {
+            "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+            "code" : "001"
+          }
+        ]
+      }
+    ],
+    "kind" : "requirements",
+    "format" : [
+      "xml",
+      "json"
+    ],
+    "rest" : [
+      {
+        "mode" : "client",
+        "documentation" : "Conformant systems must record [[Provenance]] records on all Create, Update and Delete actions on any resource other than Provenance or AuditEvent.       Conformant systems must record [[AuditEvent]] records on all Create, Update and Delete actions as well as all GET operations (read, search, etc.)",
+        "security" : {
+          "description" : "Any security rules??"
+        },
+        "resource" : [
+          {
+            "type" : "Provenance",
+            "profile" : "http://hl7.org/fhir/StructureDefinition/ehrsrle-provenance",
+            "interaction" : [
+              {
+                "extension" : [
+                  {
+                    "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                    "valueCode" : "SHALL"
+                  }
+                ],
+                "code" : "create",
+                "documentation" : "Allows defining a new data element.  Repositories requiring curation of submitted data elements may require all new data elements to have a status of 'draft'."
+              }
+            ]
+          },
+          {
+            "type" : "AuditEvent",
+            "profile" : "http://hl7.org/fhir/StructureDefinition/ehrsrle-auditevent",
+            "interaction" : [
+              {
+                "extension" : [
+                  {
+                    "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                    "valueCode" : "SHALL"
+                  }
+                ],
+                "code" : "create",
+                "documentation" : "Allows defining a new data element.  Repositories requiring curation of submitted data elements may require all new data elements to have a status of 'draft'."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

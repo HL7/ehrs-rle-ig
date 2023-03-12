@@ -1,0 +1,210 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "ehrsrle-auditevent",
+    "url": "http://hl7.org/fhir/uv/ehrs-rle/StructureDefinition/ehrsrle-auditevent",
+    "name": "EHRSFunctionalModelRecordLifecycleEventsAuditEvent",
+    "title": "EHRS Functional Model - Record Lifecycle Events - AuditEvent",
+    "status": "draft",
+    "experimental": false,
+    "date": "2022-05-09",
+    "publisher": "Health Level Seven International - Electronic Health Record Work Group",
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "http://www.hl7.org/Special/committees/ehr"
+                }
+            ]
+        }
+    ],
+    "description": "Defines the elements to be supported within the AuditEvent resource in order to conform with the Electronic Health Record System Functional Model Record Lifecycle Event standard",
+    "jurisdiction": [
+        {
+            "coding": [
+                {
+                    "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+                    "code": "001"
+                }
+            ]
+        }
+    ],
+    "mapping": [
+        {
+            "identity": "rle",
+            "uri": "http://hl7.org/fhir/uv/ehrs-rle/RLE",
+            "name": "RLE"
+        }
+    ],
+    "kind": "resource",
+    "abstract": false,
+    "type": "AuditEvent",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/AuditEvent",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "AuditEvent",
+                "path": "AuditEvent",
+                "mustSupport": false
+            },
+            {
+                "id": "AuditEvent.type",
+                "path": "AuditEvent.type",
+                "mustSupport": true
+            },
+            {
+                "id": "AuditEvent.subtype",
+                "path": "AuditEvent.subtype",
+                "mustSupport": true
+            },
+            {
+                "id": "AuditEvent.action",
+                "path": "AuditEvent.action",
+                "mustSupport": true,
+                "mapping": [
+                    {
+                        "identity": "rle",
+                        "map": "TI.2.1.2.1#05"
+                    }
+                ]
+            },
+            {
+                "id": "AuditEvent.recorded",
+                "path": "AuditEvent.recorded",
+                "mustSupport": true,
+                "mapping": [
+                    {
+                        "identity": "rle",
+                        "map": "TI.2.1.2.1#06"
+                    }
+                ]
+            },
+            {
+                "id": "AuditEvent.purposeOfEvent",
+                "path": "AuditEvent.purposeOfEvent",
+                "mustSupport": true,
+                "mapping": [
+                    {
+                        "identity": "rle",
+                        "map": "TI.2.1.2.1#08"
+                    }
+                ]
+            },
+            {
+                "id": "AuditEvent.agent",
+                "path": "AuditEvent.agent",
+                "mustSupport": true
+            },
+            {
+                "id": "AuditEvent.agent.role",
+                "path": "AuditEvent.agent.role",
+                "mustSupport": true
+            },
+            {
+                "id": "AuditEvent.agent.who",
+                "path": "AuditEvent.agent.who",
+                "mustSupport": true,
+                "mapping": [
+                    {
+                        "identity": "rle",
+                        "map": "TI.2.1.2.1#02 (Organization), TI.2.1.2.1#03 (Practitioner), TI.2.1.2.1#04 (Device)"
+                    }
+                ]
+            },
+            {
+                "id": "AuditEvent.agent.requestor",
+                "path": "AuditEvent.agent.requestor",
+                "mustSupport": true
+            },
+            {
+                "id": "AuditEvent.agent.location",
+                "path": "AuditEvent.agent.location",
+                "mustSupport": true
+            },
+            {
+                "id": "AuditEvent.agent.policy",
+                "path": "AuditEvent.agent.policy",
+                "mustSupport": true
+            },
+            {
+                "id": "AuditEvent.agent.network[x]",
+                "path": "AuditEvent.agent.network",
+                "mustSupport": true,
+                "mapping": [
+                    {
+                        "identity": "rle",
+                        "map": "TI.2.1.2.1#07"
+                    }
+                ]
+            },
+            {
+                "id": "AuditEvent.agent.purposeOfUse",
+                "path": "AuditEvent.agent.purposeOfUse",
+                "mustSupport": true,
+                "mapping": [
+                    {
+                        "identity": "rle",
+                        "map": "TI.2.1.2#01"
+                    }
+                ]
+            },
+            {
+                "id": "AuditEvent.source",
+                "path": "AuditEvent.source",
+                "mustSupport": true
+            },
+            {
+                "id": "AuditEvent.source.site",
+                "path": "AuditEvent.source.site",
+                "mustSupport": true
+            },
+            {
+                "id": "AuditEvent.source.observer",
+                "path": "AuditEvent.source.observer",
+                "mustSupport": true
+            },
+            {
+                "id": "AuditEvent.source.type",
+                "path": "AuditEvent.source.type",
+                "mustSupport": true
+            },
+            {
+                "id": "AuditEvent.entity",
+                "path": "AuditEvent.entity",
+                "mustSupport": true
+            },
+            {
+                "id": "AuditEvent.entity.what",
+                "path": "AuditEvent.entity.what",
+                "mustSupport": true,
+                "mapping": [
+                    {
+                        "identity": "rle",
+                        "map": "TI.2.1.1#02, TI.2.1.2.9#09"
+                    }
+                ]
+            },
+            {
+                "id": "AuditEvent.entity.type",
+                "path": "AuditEvent.entity.type",
+                "mustSupport": true
+            },
+            {
+                "id": "AuditEvent.entity.role",
+                "path": "AuditEvent.entity.role",
+                "mustSupport": true
+            },
+            {
+                "id": "AuditEvent.entity.lifecycle",
+                "path": "AuditEvent.entity.lifecycle",
+                "mustSupport": true
+            },
+            {
+                "id": "AuditEvent.entity.securityLabel",
+                "path": "AuditEvent.entity.securityLabel",
+                "mustSupport": true
+            }
+        ]
+    }
+}

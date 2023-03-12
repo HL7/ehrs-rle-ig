@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="ehrs-rle"/>
 	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
@@ -9,7 +8,7 @@
 		<valueInteger value="1"/>
 	</extension>
   <url value="http://hl7.org/fhir/uv/ehrs-rle/ImplementationGuide/ehrs-rle"/>
-  <version value="1.0.0-ballot"/>
+  <version value="1.1.0-ballot"/>
   <name value="EHRSFunctionalModelRecordLifecycleEventsIG"/>
   <title value="EHRS Functional Model - Record Lifecycle Events Implementation Guide"/>
   <status value="active"/>
@@ -29,7 +28,7 @@
 		</coding>
 	</jurisdiction>
   <packageId value="hl7.fhir.uv.ehrs-rle"/>
-  <fhirVersion value="4.0.1"/>
+  <fhirVersion value="5.0.0"/>
   <definition>
     <!-- <resource>
       <exampleBoolean value="true"/>
@@ -40,34 +39,37 @@
       </reference>
     </resource> -->
     <page>
-      <!-- The root will always be toc.html - the template will force it if you don't do it -->
-      <nameUrl value="toc.html"/>
-      <title value="Table of Contents"/>
-      <generation value="html"/>
+      <sourceUrl value="index.md"/>
+      <name value="index.html"/>
+      <title value="Home Page"/>
+      <generation value="markdown"/>
       <page>
-        <nameUrl value="index.html"/>
-        <title value="Home Page"/>
-        <generation value="html"/>
-      </page>
-      <page>
-				<nameUrl value="downloads.html"/>
+				<sourceUrl value="downloads.md"/>
+				<name value="downloads.html"/>
 				<title value="Downloads"/>
 				<generation value="markdown"/>
 			</page>  
 			<page>
-				<nameUrl value="add.html"/>
+				<sourceUrl value="add.md"/>
+				<name value="add.html"/>
 				<title value="Addenda"/>
 				<generation value="markdown"/>
 			</page>
     </page>
     <!-- copyright year is a mandatory parameter -->
     <parameter>
-      <code value="copyrightyear"/>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="copyrightyear"/>
+      </code>
       <value value="2022+"/>
     </parameter>
     <!-- releaselabel should be the ballot status for HL7-published IGs. -->
     <parameter>
-      <code value="releaselabel"/>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="releaselabel"/>
+      </code>
       <value value="Informative Release 1"/>
     </parameter>
   </definition>
