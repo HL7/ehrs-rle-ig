@@ -516,7 +516,7 @@ FHIR resources – when captured natively in the source EHR, PHR or other system
 
 ### Record Lifecycle Event Metadata Captured in FHIR Resources
 
-The following table shows the FHIR Resources and applicable Attributes captured - event, provenance and evidentiary metadata - at each occurrence of a Record Lifecycle Event. W5 metadata includes who, what, when, where, why attributes as shown below. W5 metadata elements are required.
+The following table shows the FHIR Resources and applicable Attributes captured - event, provenance and evidentiary metadata - at each occurrence of a Record Lifecycle Event. [W5 metadata](https://hl7.org/fhir/R5/w5.html) includes who, what, when, where, why attributes as shown below. W5 metadata elements are required.
 
 <table border="1" cellspacing="0" cellpadding="5" style="border-collapse:collapse;border:solid windowtext 1pt">
   <thead>

@@ -30,9 +30,9 @@
     ],
     "mapping": [
         {
-            "identity": "rle",
-            "uri": "http://hl7.org/fhir/uv/ehrs-rle/RLE",
-            "name": "RLE"
+            "identity": "ehrsfm",
+            "uri": "http://hl7.org/ehrs/ImplementationGuide/EHRSFMR2.1",
+            "name": "EHRS-FM R2.1"
         }
     ],
     "kind": "resource",
