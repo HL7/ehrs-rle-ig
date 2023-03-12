@@ -5,7 +5,6 @@
     "name" : "EHRSFunctionalModelRecordLifecycleEventsCapabilityStatement",
     "title" : "EHRS Functional Model - Record Lifecycle Events - Capability Statement",
     "status" : "draft",
-    "date" : "2014-12-06",
     "publisher" : "Health Level Seven International - Electronic Health Record Work Group",
     "contact" : [
       {
@@ -29,6 +28,7 @@
       }
     ],
     "kind" : "requirements",
+    "fhirVersion" : "5.0.0",
     "format" : [
       "xml",
       "json"
@@ -43,7 +43,7 @@
         "resource" : [
           {
             "type" : "Provenance",
-            "profile" : "http://hl7.org/fhir/StructureDefinition/ehrsrle-provenance",
+            "profile" : "http://hl7.org/fhir/uv/ehrs-rle/StructureDefinition/ehrsrle-provenance",
             "interaction" : [
               {
                 "extension" : [
@@ -59,7 +59,7 @@
           },
           {
             "type" : "AuditEvent",
-            "profile" : "http://hl7.org/fhir/StructureDefinition/ehrsrle-auditevent",
+            "profile" : "http://hl7.org/fhir/uv/ehrs-rle/StructureDefinition/ehrsrle-auditevent",
             "interaction" : [
               {
                 "extension" : [

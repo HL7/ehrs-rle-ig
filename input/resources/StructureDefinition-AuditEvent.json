@@ -6,7 +6,6 @@
     "title": "EHRS Functional Model - Record Lifecycle Events - AuditEvent",
     "status": "draft",
     "experimental": false,
-    "date": "2022-05-09",
     "publisher": "Health Level Seven International - Electronic Health Record Work Group",
     "contact": [
         {
@@ -44,18 +43,13 @@
     "differential": {
         "element": [
             {
-                "id": "AuditEvent",
-                "path": "AuditEvent",
-                "mustSupport": false
-            },
-            {
-                "id": "AuditEvent.type",
-                "path": "AuditEvent.type",
+                "id": "AuditEvent.category",
+                "path": "AuditEvent.category",
                 "mustSupport": true
             },
             {
-                "id": "AuditEvent.subtype",
-                "path": "AuditEvent.subtype",
+                "id": "AuditEvent.code",
+                "path": "AuditEvent.code",
                 "mustSupport": true
             },
             {
@@ -81,8 +75,8 @@
                 ]
             },
             {
-                "id": "AuditEvent.purposeOfEvent",
-                "path": "AuditEvent.purposeOfEvent",
+                "id": "AuditEvent.authorization",
+                "path": "AuditEvent.authorization",
                 "mustSupport": true,
                 "mapping": [
                     {
@@ -139,8 +133,8 @@
                 ]
             },
             {
-                "id": "AuditEvent.agent.purposeOfUse",
-                "path": "AuditEvent.agent.purposeOfUse",
+                "id": "AuditEvent.agent.authorization",
+                "path": "AuditEvent.agent.authorization",
                 "mustSupport": true,
                 "mapping": [
                     {
@@ -186,18 +180,8 @@
                 ]
             },
             {
-                "id": "AuditEvent.entity.type",
-                "path": "AuditEvent.entity.type",
-                "mustSupport": true
-            },
-            {
                 "id": "AuditEvent.entity.role",
                 "path": "AuditEvent.entity.role",
-                "mustSupport": true
-            },
-            {
-                "id": "AuditEvent.entity.lifecycle",
-                "path": "AuditEvent.entity.lifecycle",
                 "mustSupport": true
             },
             {
