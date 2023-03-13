@@ -1,4 +1,6 @@
 == Suppressed Messages ==
 # References used in examples
-ERROR: Unable to resolve resource with reference 'Practitioner/xcda-author'
-ERROR: Unable to resolve resource with reference 'MedicationRequest/example/_history/1'
+Unable to resolve resource with reference 'Practitioner/xcda-author'
+Unable to resolve resource with reference 'MedicationRequest/example/_history/1'
+# Example code system suggestion
+Code System URI 'http://hl7.org/ehrs/Requirements/EHRSFMR2.1' is unknown so the code cannot be validated
