@@ -191,9 +191,7 @@ As described above, Record Entries have a lifespan and may have lifecycle events
 
 CRUDE = Create, Read, Update, Delete, Execute. Record Lifecycle Events (RLEs) are specializations of basic CRUDE events for purposes of health data/record management end-to-end. End-to-end means: 1) for the duration of data/record lifespan within the source EHR, PHR or other system, and 2) following the path of data/record exchange system by system downstream to the ultimate point of access/use.
 
-FHIR resources – when captured natively in the source EHR, PHR or other system Record Entries – include resources resulting from the Action taken (e.g., register patient, order medication, take progress note). Plus, all RLEs depend on the AuditEvent resource to capture basic metadata. Plus, all RLEs which <b>C</b>reate or <b>U</b>pdate resource content depend on the Provenance resource to capture content-related metadata. The following table shows how RLEs relate to CRUDE events. Some RLEs create separate new artifacts as shown.
-
-<span style="color:blue">RLEs in blue</span> are included in FHIR Connectathon Tracks and are currently limited to basic <b>C</b>, <b>R</b>, and <b>U</b> events.
+FHIR resources – when captured natively in the source EHR, PHR or other system Record Entries – include resources resulting from the Action taken (e.g., register patient, order medication, take progress note). Plus, all RLEs depend on the AuditEvent resource to capture basic metadata. Plus, all RLEs which <b>C</b>reate or <b>U</b>pdate resource content depend on the Provenance resource to capture content-related metadata. The following table shows how RLEs relate to [CRUDE events](https://hl7.org/fhir/R5/valueset-audit-event-action.html). Some RLEs create separate new artifacts as shown.
 
 <table border="1" cellspacing="0" cellpadding="5" style="border-collapse:collapse;border:solid windowtext 1pt;">
   <col style="width:20px;height:20px"/>
@@ -217,11 +215,9 @@ FHIR resources – when captured natively in the source EHR, PHR or other system
     <td rowspan="2" style="border:solid windowtext 2.25pt;font-weight:bold">
       CRUDE - At each RLE,<br/>
       per Record Entry instance<br/>
-      <span style="color:blue">
-        C - Create<br/>
-        R - Read<br/>
-        U - Update<br/>
-      </span>
+      C - Create<br/>
+      R - Read<br/>
+      U - Update<br/>
       D - Delete<br/>
       E - Execute
     </td>
@@ -244,18 +240,18 @@ FHIR resources – when captured natively in the source EHR, PHR or other system
     </td>
   </tr>
   <tr>
-    <td style="color:blue">1</td>
-    <td style="color:blue">Originate/Retain</td>
-    <td style="color:blue">1..1</td>
-    <td style="color:blue">1..1</td>
-    <td style="color:blue">1..*</td>
-    <td style="color:blue">C New Instance(s)</td>
-    <td style="color:blue">---</td>
+    <td>1</td>
+    <td>Originate/Retain</td>
+    <td>1..1</td>
+    <td>1..1</td>
+    <td>1..*</td>
+    <td>C New Instance(s)</td>
+    <td>---</td>
   </tr>
-  <tr style="color:blue">
+  <tr>
     <td>2</td>
     <td>Update/Amend</td>
-    <td style="color:blue">1..1</td>
+    <td>1..1</td>
     <td>1..1</td>
     <td>1..*</td>
     <td>C or U Instance(s)</td>
@@ -283,13 +279,13 @@ FHIR resources – when captured natively in the source EHR, PHR or other system
     <td>---</td>
   </tr>
   <tr>
-    <td style="color:blue">5</td>
-    <td style="color:blue">Access/View</td>
-    <td style="color:blue">1..1</td>
-    <td style="color:blue">1..1<sup>a</sup></td>
-    <td style="color:blue">1..*</td>
-    <td style="color:blue">R Instance(s)</td>
-    <td style="color:blue">C New extract artifact</td>
+    <td>5</td>
+    <td>Access/View</td>
+    <td>1..1</td>
+    <td>1..1<sup>a</sup></td>
+    <td>1..*</td>
+    <td>R Instance(s)</td>
+    <td>C New extract artifact</td>
   </tr>
   <tr>
     <td>6</td>
@@ -726,7 +722,7 @@ The following table shows the FHIR Resources and applicable Attributes captured 
     <td>Digital Signature(s)</td>
     <td>
       Provenance<br/>
-      <span style="color:blue">one per signature</span>
+      <span>one per signature</span>
     </td>
     <td>signature : Signature 0..*</td>
   </tr>
@@ -752,7 +748,7 @@ The following table shows the FHIR Resources and applicable Attributes captured 
   <tr>
     <td>
       Provenance.entity : 0..*<br/>
-      <span style="color:blue">one per Record Entry</span>
+      <span>one per Record Entry</span>
     </td>
     <td>
       role : Coding 0..1 « ProvenanceEntityRole »<br/>
@@ -764,7 +760,7 @@ The following table shows the FHIR Resources and applicable Attributes captured 
   <tr>
     <td>
       AuditEvent.entity : 0..*<br/>
-      <span style="color:blue">one per Content item</span>
+      <span>one per Content item</span>
     </td>
     <td>
       identifier : Identifier 0..1<br/>
@@ -775,7 +771,7 @@ The following table shows the FHIR Resources and applicable Attributes captured 
     <td rowspan="2">Corresponding/linked Record Entry(ies)</td>
     <td>
       Provenance.entity : 0..*<br/>
-      <span style="color:blue">one per linked Record Entry</span>
+      <span>one per linked Record Entry</span>
     </td>
     <td>
       role : Coding 0..1 « ProvenanceEntityRole »<br/>
@@ -787,7 +783,7 @@ The following table shows the FHIR Resources and applicable Attributes captured 
   <tr>
     <td>
       AuditEvent.entity : 0..*<br/>
-      <span style="color:blue">one per linked Record Entry</span>
+      <span>one per linked Record Entry</span>
     </td>
     <td>
       identifier : Identifier 0..1<br/>
@@ -798,7 +794,7 @@ The following table shows the FHIR Resources and applicable Attributes captured 
     <td rowspan="2">Amendment/Translation Sequence</td>
     <td>
       Provenance.entity : 0..*<br/>
-      <span style="color:blue">one for each Record Entry in sequence</span>
+      <span>one for each Record Entry in sequence</span>
     </td>
     <td>
       role : Coding 0..1 « ProvenanceEntityRole »<br/>
@@ -815,7 +811,7 @@ The following table shows the FHIR Resources and applicable Attributes captured 
     <td rowspan="2">Pointer to Pre Event Entry, if chained</td>
     <td>
       Provenance.entity : 0..*<br/>
-      <span style="color:blue">one per previous instance</span>
+      <span>one per previous instance</span>
     </td>
     <td>
       role : Coding 0..1 « ProvenanceEntityRole »<br/>
@@ -827,7 +823,7 @@ The following table shows the FHIR Resources and applicable Attributes captured 
   <tr>
     <td>
       AuditEvent.entity : 0..*<br/>
-      <span style="color:blue">one per previous instance</span>
+      <span>one per previous instance</span>
     </td>
     <td>
       identifier : Identifier 0..1<br/>
@@ -841,7 +837,7 @@ The following table shows the FHIR Resources and applicable Attributes captured 
     </td>
     <td>
       Provenance.entity : 0..*<br/>
-      <span style="color:blue">one per source</span>
+      <span>one per source</span>
     </td>
     <td>
       role : Coding 0..1 « ProvenanceEntityRole »<br/>
@@ -853,7 +849,7 @@ The following table shows the FHIR Resources and applicable Attributes captured 
   <tr>
     <td>
       AuditEvent.source : 1..1<br/>
-      <span style="color:blue">one per source</span>
+      <span>one per source</span>
     </td>
     <td>
       site : BackboneElement 0..1<br/>
@@ -864,7 +860,7 @@ The following table shows the FHIR Resources and applicable Attributes captured 
   <tr>
     <td>
       AuditEvent.entity : 0..*<br/>
-      <span style="color:blue">one per source</span>
+      <span>one per source</span>
     </td>
     <td>
       identifier : Identifier 0..1<br/>
@@ -884,7 +880,7 @@ The following table shows the FHIR Resources and applicable Attributes captured 
     <td rowspan="2">Record Entry Permissions</td>
     <td>
       AuditEvent.agent : 1..*<br/>
-      <span style="color:blue">one per agent</span>
+      <span>one per agent</span>
     </td>
     <td>
       <b>[for role-based permissions]</b><br/>
@@ -897,7 +893,7 @@ The following table shows the FHIR Resources and applicable Attributes captured 
   <tr>
     <td>
       AuditEvent.entity : 0..*<br/>
-      <span style="color:blue">One per agent label</span>
+      <span>One per agent label</span>
     </td>
     <td>securityLabel : Coding 0..1 « [as specified] »</td>
   </tr>
@@ -905,7 +901,7 @@ The following table shows the FHIR Resources and applicable Attributes captured 
     <td rowspan="2">Event Transaction Entries</td>
     <td>
       Provenance.entity : 0..*<br/>
-      <span style="color:blue">one per Record Entry</span>
+      <span>one per Record Entry</span>
     </td>
     <td>
       role : Coding 0..1 « ProvenanceEntityRole »<br/>
@@ -917,7 +913,7 @@ The following table shows the FHIR Resources and applicable Attributes captured 
   <tr>
     <td>
       AuditEvent.entity : 0..*<br/>
-      <span style="color:blue">one per Record Entry</span>
+      <span>one per Record Entry</span>
     </td>
     <td>
       identifier : Identifier 0..1<br/>
@@ -929,7 +925,7 @@ The following table shows the FHIR Resources and applicable Attributes captured 
     <td rowspan="2">Identifier/Version of Translation Tools</td>
     <td>
       Provenance.entity : 0..*<br/>
-      <span style="color:blue">one per translation event</span>
+      <span>one per translation event</span>
     </td>
     <td>
       role : Coding 0..1 « ProvenanceEntityRole »<br/>
@@ -941,7 +937,7 @@ The following table shows the FHIR Resources and applicable Attributes captured 
   <tr>
     <td>
       AuditEvent.agent : 1..*<br/>
-      <span style="color:blue">one per translation event</span>
+      <span>one per translation event</span>
     </td>
     <td>
       role : CodeableConcept 0..* « ActiveParticipantRoleCode »<br/>
@@ -983,8 +979,8 @@ Note that Record Entries have a pre-lifecycle event state (except for the genesi
     <td>
       Medication v1<br/>
       MedicationOrder v1<br/>
-      AuditEvent v1<br/>
-      Provenance v1
+      AuditEvent #1<br/>
+      Provenance #1
     </td>
     <td>---</td>
   </tr>
@@ -994,8 +990,8 @@ Note that Record Entries have a pre-lifecycle event state (except for the genesi
     <td>
       Medication v1<br/>
       MedicationOrder v1<br/>
-      AuditEvent v1<br/>
-      Provenance v1
+      AuditEvent #1<br/>
+      Provenance #1
     </td>
     <td>All v1 Instances</td>
   </tr>
@@ -1004,8 +1000,8 @@ Note that Record Entries have a pre-lifecycle event state (except for the genesi
     <td>
       Medication v2<br/>
       MedicationOrder v2<br/>
-      AuditEvent v2<br/>
-      Provenance v2
+      AuditEvent #1,#2<br/>
+      Provenance #1,#2
     </td>
     <td>All v1 Instances</td>
   </tr>
@@ -1015,8 +1011,8 @@ Note that Record Entries have a pre-lifecycle event state (except for the genesi
     <td>
       Medication v2<br/>
       MedicationOrder v2<br/>
-      AuditEvent v2<br/>
-      Provenance v2
+      AuditEvent #1,#2<br/>
+      Provenance #1,#2
     </td>
     <td>All v1/2 Instances</td>
   </tr>
@@ -1025,8 +1021,8 @@ Note that Record Entries have a pre-lifecycle event state (except for the genesi
     <td>
       Medication v3<br/>
       MedicationOrder v3<br/>
-      AuditEvent v3<br/>
-      Provenance v3 (with signature )
+      AuditEvent #1,#2,#3<br/>
+      Provenance #1,#2,#3 (with signature )
     </td>
     <td>All v1/2 Instances</td>
   </tr>
@@ -1036,14 +1032,14 @@ Note that Record Entries have a pre-lifecycle event state (except for the genesi
     <td>
       Medication v3<br/>
       MedicationOrder v3<br/>
-      AuditEvent v3<br/>
-      Provenance v3
+      AuditEvent #1,#2,#3<br/>
+      Provenance #1,#2,#3
     </td>
     <td>All v1/2/3 Instances</td>
   </tr>
   <tr style="height:16.6pt">
     <td>4 - Post</td>
-    <td style="color:blue">AuditEvent v4</td>
+    <td>AuditEvent #1,#2,#3,#4</td>
     <td>All v1/2/3 Instances</td>
   </tr>
   <tr style="border:solid windowtext 2pt">

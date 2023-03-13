@@ -1,0 +1,59 @@
+{
+    "resourceType": "AuditEvent",
+    "id": "example-1",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://dicom.nema.org/resources/ontology/DCM",
+                    "code": "110110",
+                    "display": "Patient Record"
+                }
+            ]
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://hl7.org/ehrs/ImplementationGuide/EHRSFMR2.1",
+                "code": "RI.1.1.1",
+                "display": "Originate/Retain"
+            }
+        ]
+    },
+    "action": "C",
+    "recorded": "2012-10-25T22:04:27+11:00",
+    "agent": [
+        {
+            "who": {
+                "identifier": {
+                    "value": "Grahame"
+                }
+            }
+        },
+        {
+            "who": {
+                "identifier": {
+                    "system": "urn:oid:2.16.840.1.113883.4.2",
+                    "value": "2.16.840.1.113883.4.2"
+                }
+            },
+            "requestor": false,
+            "networkString": "Workstation1.ehr.familyclinic.com"
+        }
+    ],
+    "source": {
+        "observer": {
+            "display": "Grahame's Laptop"
+        }
+    },
+    "entity": [
+        {
+            "what": {
+                "type": "MedicationRequest",
+                "identifier": { "value": "123" },
+                "display": "MedicationOrder v1"
+            }
+        }
+    ]
+}

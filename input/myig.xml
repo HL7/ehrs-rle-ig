@@ -30,14 +30,24 @@
   <packageId value="hl7.fhir.uv.ehrs-rle"/>
   <fhirVersion value="5.0.0"/>
   <definition>
-    <!-- <resource>
-      <exampleBoolean value="true"/>
-      <name value="EHRS FM Record Lifecycle Event"/>
-      <description value="System which records information about EHR events"/>
+    <resource>
+      <name value="RI.1.1.1 Originate/Retain Order - AuditEvent"/>
+      <description value=""/>
       <reference>
-        <reference value="CapabilityStatement/conformance-ehrs-rle"/>
+        <reference value="AuditEvent/example-1"/>
       </reference>
-    </resource> -->
+      <isExample value="true"/>
+      <profile value="http://hl7.org/fhir/uv/ehrs-rle/StructureDefinition/ehrsrle-auditevent"/>
+    </resource>
+    <resource>
+      <name value="RI.1.1.1 Originate/Retain Order - Provenance"/>
+      <description value=""/>
+      <reference>
+        <reference value="Provenance/example-1"/>
+      </reference>
+      <isExample value="true"/>
+      <profile value="http://hl7.org/fhir/uv/ehrs-rle/StructureDefinition/ehrsrle-provenance"/>
+    </resource>
     <page>
       <sourceUrl value="index.md"/>
       <name value="index.html"/>
