@@ -31,8 +31,8 @@
   <fhirVersion value="5.0.0"/>
   <definition>
     <resource>
-      <name value="RI.1.1.1 Originate/Retain Order - AuditEvent"/>
-      <description value=""/>
+      <name value="Originate/Retain Order - AuditEvent"/>
+      <description value="Example for EHR-S FM R2.1 RI.1.1.1"/>
       <reference>
         <reference value="AuditEvent/example-1"/>
       </reference>
@@ -40,8 +40,8 @@
       <profile value="http://hl7.org/fhir/uv/ehrs-rle/StructureDefinition/ehrsrle-auditevent"/>
     </resource>
     <resource>
-      <name value="RI.1.1.1 Originate/Retain Order - Provenance"/>
-      <description value=""/>
+      <name value="Originate/Retain Order - Provenance"/>
+      <description value="Example for EHR-S FM R2.1 RI.1.1.1"/>
       <reference>
         <reference value="Provenance/example-1"/>
       </reference>
