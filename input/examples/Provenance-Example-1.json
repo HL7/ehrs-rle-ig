@@ -3,7 +3,7 @@
     "id": "example-1",
     "target": [
         {
-            "reference": "MedicationRequest/example/_history/1"
+            "reference": "http://example.org/MedicationRequest/example/_history/1"
         }
     ],
     "recorded": "2015-06-27T08:39:24+10:00",
@@ -22,7 +22,7 @@
     "agent": [
         {
             "who": {
-                "reference": "Practitioner/xcda-author"
+                "reference": "http://example.org/Practitioner/xcda-author"
             }
         }
     ]
