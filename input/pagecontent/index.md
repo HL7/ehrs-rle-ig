@@ -11,7 +11,7 @@ For the purposes of this implementation guide, "must support" means that the sys
 
 ### Introduction
 
-This Implementation Guide offers a methodology to support trusted electronic health record (EHR) management using HL7 Fast Health Interoperable Resources (FHIR).  This approach is based on the Record Infrastructure Section of ISO/HL7 10781 Electronic Health Record System Functional Model (EHR-S FM) Release 2 and ISO 21089 Trusted End-to-End Information Flows.  ISO 10781 was published in 2014 and contains 24 lifecycle events, matching the first 24 in this IG.  ISO 21089 has passed ISO Technical Specification ballot and is to be published in 2017 and contains 27 lifecycle events, matching all those in this IG.  (This IG also intended applicable to upcoming ISO/HL7 16527 Personal Health Record System Functional Model (PHR-S FM) Release 2, which will incorporate the Record Infrastructure Section.)
+This Implementation Guide offers a methodology to support trusted electronic health record (EHR) and personal health record (PHR) management using HL7 Fast Health Interoperable Resources (FHIR). This approach is based on the Record Infrastructure Section of ISO/HL7 10781:2023 Electronic Health Record System Functional Model (EHR-S FM) Release 2.1, ISO/HL7 16527:2023 Personal Health Record System Functional Model (PHR-S FM) Release 2 and ISO 21089:2018 Trusted End-to-End Information Flows. These Standards describe how EHR/PHR/HIT system functions (software) manage health record entries (data) during the complete record entry lifespan and at each lifecycle event (RLE) occurring therein.
 
 ### Actions and Record Entries
 
@@ -28,7 +28,7 @@ Actor performing the Action or not...
 
 > A Record Entry may have a pre and post Event state if content is modified. In this case, the original Record Entry is preserved (with signature binding) and a new Entry is created (with new signature binding). A Record Entry contains data and metadata, in multiple formats, following various conventions and standards. Included data may be tagged, and/or delimited, structured (concise, encoded, computable), or unstructured (free form, non-computable). Data may be encoded as text, document, images, audio, waveforms, in ASCII, binary or other encoding."
 
-EHR, PHR and other Systems, designed to follow ISO/HL7 10781 and ISO 21089 record management methodology and incorporate FHIR resources natively, will create Record Entries with one or more FHIR resource instances. These FHIR resources will be bound to an
+EHR, PHR and other Systems, designed to follow ISO/HL7 10781, ISO 16527 and/or ISO 21089 record management methodology and incorporate FHIR resources natively, will create Record Entries with one or more FHIR resource instances. These FHIR resources will be bound to an
 [AuditEvent](http://hl7.org/fhir/R5/auditevent.html) resource instance and, in the case where content is new or updated, a 
 [Provenance](http://hl7.org/fhir/R4/provenance.html) resource instance in the Record Entry.
 
@@ -58,7 +58,7 @@ As described above, Record Entries have a lifespan and may have lifecycle events
   <tr>
     <td>2</td>
     <td>Update/Amend</td>
-    <td>Makes any change to record entry content currently residing in storage considered permanent (persistent)</td>
+    <td>Causes the system to make one or more changes to record entry content currently residing in storage considered permanent (persistent)</td>
   </tr>
   <tr>
     <td>3</td>
@@ -185,11 +185,21 @@ As described above, Record Entries have a lifespan and may have lifecycle events
     <td>Decrypt</td>
     <td>Causes the system to decode record entry content from a cipher</td>
   </tr>
+    <tr>
+    <td>28</td>
+    <td>Copy Content</td>
+    <td>Causes the system to select and duplicate record entry content in an electronic clipboard with the intent to paste that content into another record entry (precursor action to Paste Content Lifecycle Event)</td>
+  </tr>
+  <tr>
+    <td>29</td>
+    <td>Paste Content</td>
+    <td>Causes the system to insert record content from the electronic clipboard (thus duplicating that content) into another record entry (successor action to Copy Content Lifecycle Event)</td>
+  </tr>
 </table>
 
 ### CRUDE Events
 
-CRUDE = Create, Read, Update, Delete, Execute. Record Lifecycle Events (RLEs) are specializations of basic CRUDE events for purposes of health data/record management end-to-end. End-to-end means: 1) for the duration of data/record lifespan within the source EHR, PHR or other system, and 2) following the path of data/record exchange system by system downstream to the ultimate point of access/use.
+CRUDE = Create, Read, Update, Delete. Record Lifecycle Events (RLEs) are specializations of basic CRUDE events for purposes of health data/record management end-to-end. End-to-end means: 1) for the duration of data/record lifespan within the source EHR, PHR or other system, and 2) following the path of data/record exchange system by system downstream to the ultimate point of access/use.
 
 FHIR resources – when captured natively in the source EHR, PHR or other system Record Entries – include resources resulting from the Action taken (e.g., register patient, order medication, take progress note). Plus, all RLEs depend on the AuditEvent resource to capture basic metadata. Plus, all RLEs which <b>C</b>reate or <b>U</b>pdate resource content depend on the Provenance resource to capture content-related metadata. The following table shows how RLEs relate to [CRUDE events](https://hl7.org/fhir/R5/valueset-audit-event-action.html). Some RLEs create separate new artifacts as shown.
 
@@ -213,13 +223,12 @@ FHIR resources – when captured natively in the source EHR, PHR or other system
       in Record Entry
     </td>
     <td rowspan="2" style="border:solid windowtext 2.25pt;font-weight:bold">
-      CRUDE - At each RLE,<br/>
+      CRUD - At each RLE,<br/>
       per Record Entry instance<br/>
       C - Create<br/>
       R - Read<br/>
       U - Update<br/>
-      D - Delete<br/>
-      E - Execute
+      D - Delete
     </td>
     <td rowspan="2" style="border:solid windowtext 2.25pt;font-weight:bold">
       New Artifacts<br/>
@@ -347,7 +356,7 @@ FHIR resources – when captured natively in the source EHR, PHR or other system
     <td>1..1</td>
     <td>1..1<sup>b</sup></td>
     <td>1..*</td>
-    <td>C or U Instance(s) Note b</td>
+    <td>C or U Instance(s)<sup>b</sup></td>
     <td>---</td>
   </tr>
   <tr>
@@ -374,7 +383,7 @@ FHIR resources – when captured natively in the source EHR, PHR or other system
     <td>1..1</td>
     <td>1..1<sup>b</sup></td>
     <td>1..*</td>
-    <td>C or U Instance(s) - Note b</td>
+    <td>C or U Instance(s)<sup>b</sup></td>
     <td>---</td>
   </tr>
   <tr>
@@ -392,7 +401,7 @@ FHIR resources – when captured natively in the source EHR, PHR or other system
     <td>1..1</td>
     <td>1..1<sup>b</sup></td>
     <td>1..*</td>
-    <td>C or U Instance(s) - Note b</td>
+    <td>C or U Instance(s)<sup>b</sup></td>
     <td>---</td>
   </tr>
   <tr>
@@ -401,7 +410,7 @@ FHIR resources – when captured natively in the source EHR, PHR or other system
     <td>1..1</td>
     <td>1..1<sup>b</sup></td>
     <td>1..*</td>
-    <td>C or U Instance(s) - Note b</td>
+    <td>C or U Instance(s)<sup>b</sup></td>
     <td>---</td>
   </tr>
   <tr>
@@ -410,7 +419,7 @@ FHIR resources – when captured natively in the source EHR, PHR or other system
     <td>1..1</td>
     <td>1..1<sup>b</sup></td>
     <td>1..*</td>
-    <td>C or U Instance(s) - Note b</td>
+    <td>C or U Instance(s)<sup>b</sup></td>
     <td>---</td>
   </tr>
   <tr>
@@ -419,7 +428,7 @@ FHIR resources – when captured natively in the source EHR, PHR or other system
     <td>1..1</td>
     <td>1..1<sup>b</sup></td>
     <td>1..*</td>
-    <td>C or U Instance(s) - Note b</td>
+    <td>C or U Instance(s)<sup>b</sup></td>
     <td>---</td>
   </tr>
   <tr>
@@ -428,7 +437,7 @@ FHIR resources – when captured natively in the source EHR, PHR or other system
     <td>1..1</td>
     <td>1..1<sup>b</sup></td>
     <td>1..*</td>
-    <td>C or U Instance(s) - Note b</td>
+    <td>C or U Instance(s)<sup>b</sup></td>
     <td>---</td>
   </tr>
   <tr>
@@ -437,7 +446,7 @@ FHIR resources – when captured natively in the source EHR, PHR or other system
     <td>1..1</td>
     <td>1..1<sup>b</sup></td>
     <td>1..*</td>
-    <td>C or U Instance(s) - Note b</td>
+    <td>C or U Instance(s)<sup>b</sup></td>
     <td>---</td>
   </tr>
   <tr>
@@ -446,7 +455,7 @@ FHIR resources – when captured natively in the source EHR, PHR or other system
     <td>1..1</td>
     <td>1..1<sup>b</sup></td>
     <td>1..*</td>
-    <td>C or U Instance(s) - Note b</td>
+    <td>C or U Instance(s)<sup>b</sup></td>
     <td>---</td>
   </tr>
   <tr>
@@ -455,7 +464,7 @@ FHIR resources – when captured natively in the source EHR, PHR or other system
     <td>1..1</td>
     <td>1..1<sup>b</sup></td>
     <td>1..*</td>
-    <td>C or U Instance(s) - Note b</td>
+    <td>C or U Instance(s)<sup>b</sup></td>
     <td>---</td>
   </tr>
   <tr>
@@ -464,7 +473,7 @@ FHIR resources – when captured natively in the source EHR, PHR or other system
     <td>1..1</td>
     <td>1..1<sup>b</sup></td>
     <td>1..*</td>
-    <td>C or U Instance(s) - Note b</td>
+    <td>C or U Instance(s)<sup>b</sup></td>
     <td>---</td>
   </tr>
   <tr>
@@ -482,7 +491,7 @@ FHIR resources – when captured natively in the source EHR, PHR or other system
     <td>1..1</td>
     <td>1..1</td>
     <td>1..*</td>
-    <td>C or U Instance(s) - Note b</td>
+    <td>C or U Instance(s)<sup>b</sup></td>
     <td>---</td>
   </tr>
   <tr>
@@ -491,8 +500,8 @@ FHIR resources – when captured natively in the source EHR, PHR or other system
     <td>1..1</td>
     <td>1..1</td>
     <td>1..*</td>
-    <td>R Instance(s) - Note c</td>
-    <td>---</td>
+    <td>R Instance(s)</td>
+    <td>C New clipboard artifact</td>
   </tr>
   <tr>
     <td>29</td>
@@ -500,15 +509,13 @@ FHIR resources – when captured natively in the source EHR, PHR or other system
     <td>1..1</td>
     <td>1..1</td>
     <td>1..*</td>
-    <td>C or U Instance(s) - Note d</td>
+    <td>C or U Instance(s)</td>
     <td>---</td>
   </tr>
 </table>
 
 <sup>a</sup>: RLE typically <b>C</b>reates a new artifact (see last column) and the (one) Provenance Resource is bound to this artifact (not Record Entry instance(s)).<br/>
-<sup>b</sup>: Depending on system design, RLE may <b>C</b>reate or <b>U</b>pdate Record Entry instance(s) and thus the (one) Provenance Resource is bound to these instance(s).<br/>
-<sup>c</sup>: Occurs when an agent selects and copies record entry content to an electronic clipboard with the intent to paste that content into another record entry (precursor action to Paste Record Content Lifecycle Event)<br/>
-<sup>d</sup>: Occurs when an agent pastes record content from the electronic clipboard (thus duplicating that content) into another record entry (successor action to Copy Record Content Lifecycle Event)
+<sup>b</sup>: Depending on system design, RLE may <b>C</b>reate or <b>U</b>pdate Record Entry instance(s) and thus the (one) Provenance Resource is bound to these new instance(s).<br/>
 
 ### Record Lifecycle Event Metadata Captured in FHIR Resources
 
@@ -949,7 +956,7 @@ The following table shows the FHIR Resources and applicable Attributes captured 
 
 ### EXAMPLE - Lifecycle Events for a Record Entry
 
-Action = Medication Order
+Action = Medication Request
 
 Record Lifecycle Event (RLEs), in sequence: 1) originate/retain, 2) update/amend, 3) attest, 4) access/view...
 
@@ -978,7 +985,7 @@ Note that Record Entries have a pre-lifecycle event state (except for the genesi
     <td>1 - Post</td>
     <td>
       Medication v1<br/>
-      MedicationOrder v1<br/>
+      MedicationRequest v1<br/>
       AuditEvent #1<br/>
       Provenance #1
     </td>
@@ -989,7 +996,7 @@ Note that Record Entries have a pre-lifecycle event state (except for the genesi
     <td rowspan="2">Update/Amend Order</td>
     <td>
       Medication v1<br/>
-      MedicationOrder v1<br/>
+      MedicationRequest v1<br/>
       AuditEvent #1<br/>
       Provenance #1
     </td>
@@ -999,7 +1006,7 @@ Note that Record Entries have a pre-lifecycle event state (except for the genesi
     <td>2 - Post</td>
     <td>
       Medication v2<br/>
-      MedicationOrder v2<br/>
+      MedicationRequest v2<br/>
       AuditEvent #1,#2<br/>
       Provenance #1,#2
     </td>
@@ -1010,7 +1017,7 @@ Note that Record Entries have a pre-lifecycle event state (except for the genesi
     <td rowspan="2">Attest Order</td>
     <td>
       Medication v2<br/>
-      MedicationOrder v2<br/>
+      MedicationRequest v2<br/>
       AuditEvent #1,#2<br/>
       Provenance #1,#2
     </td>
@@ -1020,7 +1027,7 @@ Note that Record Entries have a pre-lifecycle event state (except for the genesi
     <td>3 - Post</td>
     <td>
       Medication v3<br/>
-      MedicationOrder v3<br/>
+      MedicationRequest v3<br/>
       AuditEvent #1,#2,#3<br/>
       Provenance #1,#2,#3 (with signature )
     </td>
@@ -1031,7 +1038,7 @@ Note that Record Entries have a pre-lifecycle event state (except for the genesi
     <td rowspan="2">Access/View Order</td>
     <td>
       Medication v3<br/>
-      MedicationOrder v3<br/>
+      MedicationRequest v3<br/>
       AuditEvent #1,#2,#3<br/>
       Provenance #1,#2,#3
     </td>
