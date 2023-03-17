@@ -1000,7 +1000,7 @@ Note that Record Entries have a pre-lifecycle event state (except for the genesi
       AuditEvent #1<br/>
       Provenance #1
     </td>
-    <td>All v1 Instances</td>
+    <td>All event 1 Instances</td>
   </tr>
   <tr>
     <td>2 - Post</td>
@@ -1010,7 +1010,7 @@ Note that Record Entries have a pre-lifecycle event state (except for the genesi
       AuditEvent #1,#2<br/>
       Provenance #1,#2
     </td>
-    <td>All v1 Instances</td>
+    <td>All event 1 Instances</td>
   </tr>
   <tr style="border-top:solid windowtext 2pt">
     <td>3 - Pre</td>
@@ -1021,7 +1021,7 @@ Note that Record Entries have a pre-lifecycle event state (except for the genesi
       AuditEvent #1,#2<br/>
       Provenance #1,#2
     </td>
-    <td>All v1/2 Instances</td>
+    <td>All event 1/2 Instances</td>
   </tr>
   <tr>
     <td>3 - Post</td>
@@ -1031,7 +1031,7 @@ Note that Record Entries have a pre-lifecycle event state (except for the genesi
       AuditEvent #1,#2,#3<br/>
       Provenance #1,#2,#3 (with signature )
     </td>
-    <td>All v1/2 Instances</td>
+    <td>All event 1/2 Instances</td>
   </tr>
   <tr style="border-top:solid windowtext 2pt">
     <td>4 - Pre</td>
@@ -1042,12 +1042,12 @@ Note that Record Entries have a pre-lifecycle event state (except for the genesi
       AuditEvent #1,#2,#3<br/>
       Provenance #1,#2,#3
     </td>
-    <td>All v1/2/3 Instances</td>
+    <td>All event 1/2/3 Instances</td>
   </tr>
   <tr style="height:16.6pt">
     <td>4 - Post</td>
     <td>AuditEvent #1,#2,#3,#4</td>
-    <td>All v1/2/3 Instances</td>
+    <td>All event 1/2/3 Instances</td>
   </tr>
   <tr style="border:solid windowtext 2pt">
     <td colspan="4">And on...</td>
