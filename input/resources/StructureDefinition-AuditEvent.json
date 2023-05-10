@@ -50,6 +50,10 @@
             {
                 "id": "AuditEvent.code",
                 "path": "AuditEvent.code",
+                "binding": {
+                    "strength": "preferred",
+                    "valueSet": "http://hl7.org/fhir/uv/ehrs-rle/ValueSet/RLE-ValueSet"
+                },
                 "mustSupport": true,
                 "mapping": [
                     {

@@ -34,7 +34,7 @@ EHR, PHR and other Systems, designed to follow ISO/HL7 10781, ISO 16527 and/or I
 
 ### Record Lifecycle Events (RLEs)
 
-As described above, Record Entries have a lifespan and may have lifecycle events (RLEs) occurring during that lifespan. Following is the current list of RLEs:
+As described above, Record Entries have a lifespan and may have [lifecycle events (RLEs)](ValueSet-RLE-ValueSet.html) occurring during that lifespan. Following is the current list of RLEs:
 
 <table border="1" cellspacing="0" cellpadding="5" width="661" style="border-collapse:collapse;border:none">
   <col style="border:solid windowtext 1.0pt"/>
