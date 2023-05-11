@@ -1,0 +1,24 @@
+{
+    "resourceType": "CodeSystem",
+    "id": "record-lifecycle-events",
+    "url": "http://hl7.org/fhir/uv/ehrs-rle/CodeSystem/record-lifecycle-events",
+    "name": "RecordLifecycleEvents",
+    "title": "record-lifecycle-events",
+    "status": "active",
+    "experimental": false,
+    "description": "Record Lifecycle Events CodeSystem - new events",
+    "caseSensitive": true,
+    "content": "complete",
+    "concept": [
+        {
+            "code": "copy",
+            "display": "Copy Content",
+            "definition": "Causes the system to select and duplicate record entry content in an electronic clipboard with the intent to paste that content into another record entry (precursor action to Paste Content Lifecycle Event)."
+        },
+        {
+            "code": "paste",
+            "display": "Paste Content",
+            "definition": "Causes the system to insert record content from the electronic clipboard (thus duplicating that content) into another record entry (successor action to Copy Content Lifecycle Event)."
+        }
+    ]
+}

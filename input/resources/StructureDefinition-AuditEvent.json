@@ -52,7 +52,7 @@
                 "path": "AuditEvent.code",
                 "binding": {
                     "strength": "preferred",
-                    "valueSet": "http://hl7.org/fhir/uv/ehrs-rle/ValueSet/RLE-ValueSet"
+                    "valueSet": "http://hl7.org/fhir/uv/ehrs-rle/ValueSet/record-lifecycle-events"
                 },
                 "mustSupport": true,
                 "mapping": [
