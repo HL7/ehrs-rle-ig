@@ -1,6 +1,13 @@
 == Suppressed Messages ==
 # Issue in R5 core
 Rule eld-27: 'Mappings SHOULD be unique by key' Failed
-The Extension 'http://hl7.org/fhir/tools/StructureDefinition/binding-definition' definition allows for the types [markdown] but found type string
+
 # Example code system suggestion
 Code System URI 'http://hl7.org/ehrs/Requirements/EHRSFMR2.1' is unknown so the code cannot be validated
+
+# it is understood that this IG is profiling non normative resources
+Reference to draft item http://hl7.org/fhir/standards-status|1.0.0
+Reference to draft item http://hl7.org/fhir/hl7-work-group|1.0.0
+
+# it is understood using jurisdiction. not clear what else to use
+Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0

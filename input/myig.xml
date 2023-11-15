@@ -7,17 +7,20 @@
 	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
 		<valueInteger value="1"/>
 	</extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="ehr"/>
+  </extension>
   <url value="http://hl7.org/fhir/uv/ehrs-rle/ImplementationGuide/ehrs-rle"/>
-  <version value="1.1.1-ballot"/>
+  <version value="1.1.1"/>
   <name value="EHRSFunctionalModelRecordLifecycleEventsIG"/>
   <title value="EHR and PHR System Functional Models - Record Lifecycle Events Implementation Guide"/>
   <status value="active"/>
   <experimental value="false"/>
-  <publisher value="Health Level Seven International - Electronic Health Record Work Group"/>
+  <publisher value="'HL7 International / Electronic Health Records"/>
 	<contact>
 		<telecom>
 			<system value="url"/>
-			<value value="http://www.hl7.org/Special/committees/ehr"/>
+			<value value="http://www.hl7.org/special/committees/ehr"/>
 		</telecom>
 	</contact>
 	<description value="EHRS Functional Model - Record Lifecycle Events - FHIR Implementation Guide"/>
@@ -81,6 +84,13 @@
         <code value="releaselabel"/>
       </code>
       <value value="Informative Release 1"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="apply-wg"/>
+      </code>
+      <value value="true"/>
     </parameter>
   </definition>
 </ImplementationGuide>
