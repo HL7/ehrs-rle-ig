@@ -1,0 +1,30 @@
+{
+    "resourceType": "ValueSet",
+    "id": "record-lifecycle-events",
+    "url": "http://hl7.org/fhir/uv/ehrs-rle/ValueSet/record-lifecycle-events",
+    "name": "RecordLifecycleEvents",
+    "title": "record-lifecycle-events",
+    "status": "active",
+    "experimental": false,
+    "description": "Record Lifecycle Events ValueSet",
+    "compose": {
+        "include": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle"
+            },
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle",
+                "concept": [
+                    {
+                        "code": "copy",
+                        "display": "Copy Content"
+                    },
+                    {
+                        "code": "paste",
+                        "display": "Paste Content"
+                    }
+                ]
+            }
+        ]
+    }
+}

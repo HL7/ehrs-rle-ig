@@ -1,49 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="ehrs-rle"/>
+	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+		<valueCode value="informative"/>
+	</extension>
+	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+		<valueInteger value="1"/>
+	</extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="ehr"/>
+  </extension>
   <url value="http://hl7.org/fhir/uv/ehrs-rle/ImplementationGuide/ehrs-rle"/>
-  <version value="0.1.0"/>
-  <name value="EHRS Functional model - Record Lifecycle Events"/>
-  <status value="draft"/>
+  <version value="1.1.1"/>
+  <name value="EHRSFunctionalModelRecordLifecycleEventsIG"/>
+  <title value="EHR and PHR System Functional Models - Record Lifecycle Events Implementation Guide"/>
+  <status value="active"/>
   <experimental value="false"/>
-  <publisher value="Health Level Seven, Int&#39;l - Electronic Health Record work group"/>
+  <publisher value="HL7 International / Electronic Health Records"/>
+	<contact>
+		<telecom>
+			<system value="url"/>
+			<value value="http://www.hl7.org/Special/committees/ehr"/>
+		</telecom>
+	</contact>
+	<description value="EHRS Functional Model - Record Lifecycle Events - FHIR Implementation Guide"/>
+	<jurisdiction>
+		<coding>
+			<system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+			<code value="001"/>
+		</coding>
+	</jurisdiction>
   <packageId value="hl7.fhir.uv.ehrs-rle"/>
-  <fhirVersion value="4.0.1"/>
+  <fhirVersion value="5.0.0"/>
   <definition>
-    <!-- <resource>
-      <exampleBoolean value="true"/>
-      <name value="EHRS FM Record Lifecycle Event"/>
-      <description value="System which records information about EHR events"/>
+    <resource>
+      <name value="Originate/Retain Order - AuditEvent"/>
+      <description value="Example for EHR-S FM R2.1 RI.1.1.1"/>
       <reference>
-        <reference value="CapabilityStatement/conformance-ehrs-rle"/>
+        <reference value="AuditEvent/example-1"/>
       </reference>
-    </resource> -->
+      <isExample value="true"/>
+      <profile value="http://hl7.org/fhir/uv/ehrs-rle/StructureDefinition/ehrsrle-auditevent"/>
+    </resource>
+    <resource>
+      <name value="Originate/Retain Order - Provenance"/>
+      <description value="Example for EHR-S FM R2.1 RI.1.1.1"/>
+      <reference>
+        <reference value="Provenance/example-1"/>
+      </reference>
+      <isExample value="true"/>
+      <profile value="http://hl7.org/fhir/uv/ehrs-rle/StructureDefinition/ehrsrle-provenance"/>
+    </resource>
     <page>
-      <!-- The root will always be toc.html - the template will force it if you don't do it -->
-      <nameUrl value="toc.html"/>
-      <title value="Table of Contents"/>
-      <generation value="html"/>
-     <page>
-        <nameUrl value="index.html"/>
-        <title value="Home Page"/>
-        <generation value="html"/>
-      </page>
+      <sourceUrl value="index.md"/>
+      <name value="index.html"/>
+      <title value="Home Page"/>
+      <generation value="markdown"/>
       <page>
-        <nameUrl value="registry.html"/>
-        <title value="Registry"/>
-      <generation value="html"/>
-    </page>
+				<sourceUrl value="downloads.md"/>
+				<name value="downloads.html"/>
+				<title value="Downloads"/>
+				<generation value="markdown"/>
+			</page>  
+			<page>
+				<sourceUrl value="add.md"/>
+				<name value="add.html"/>
+				<title value="Addenda"/>
+				<generation value="markdown"/>
+			</page>
     </page>
     <!-- copyright year is a mandatory parameter -->
     <parameter>
-      <code value="copyrightyear"/>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="copyrightyear"/>
+      </code>
       <value value="2022+"/>
     </parameter>
     <!-- releaselabel should be the ballot status for HL7-published IGs. -->
     <parameter>
-      <code value="releaselabel"/>
-      <value value="CI Build"/>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="releaselabel"/>
+      </code>
+      <value value="Informative Release 1"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="apply-wg"/>
+      </code>
+      <value value="true"/>
     </parameter>
   </definition>
 </ImplementationGuide>

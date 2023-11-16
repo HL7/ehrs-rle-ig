@@ -1,0 +1,181 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "ehrsrle-auditevent",
+    "url": "http://hl7.org/fhir/uv/ehrs-rle/StructureDefinition/ehrsrle-auditevent",
+    "name": "EHRSFunctionalModelRecordLifecycleEventsAuditEvent",
+    "title": "EHRS Functional Model - Record Lifecycle Events - AuditEvent",
+    "status": "draft",
+    "experimental": false,
+    "publisher": "Health Level Seven International - Electronic Health Record Work Group",
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "http://www.hl7.org/Special/committees/ehr"
+                }
+            ]
+        }
+    ],
+    "description": "Defines the elements to be supported within the AuditEvent resource in order to conform with the Electronic Health Record System Functional Model Record Lifecycle Event standard",
+    "jurisdiction": [
+        {
+            "coding": [
+                {
+                    "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+                    "code": "001"
+                }
+            ]
+        }
+    ],
+    "mapping": [
+        {
+            "identity": "ehrsfm",
+            "uri": "http://hl7.org/ehrs/ImplementationGuide/EHRSFMR2.1",
+            "name": "EHRS-FM R2.1"
+        }
+    ],
+    "kind": "resource",
+    "abstract": false,
+    "type": "AuditEvent",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/AuditEvent",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "AuditEvent.category",
+                "path": "AuditEvent.category",
+                "mustSupport": true
+            },
+            {
+                "id": "AuditEvent.code",
+                "path": "AuditEvent.code",
+                "binding": {
+                    "strength": "preferred",
+                    "valueSet": "http://hl7.org/fhir/uv/ehrs-rle/ValueSet/record-lifecycle-events"
+                },
+                "mustSupport": true,
+                "mapping": [
+                    {
+                        "identity": "ehrsfm",
+                        "map": "TI.2.1.2.1#05"
+                    }
+                ]
+            },
+            {
+                "id": "AuditEvent.action",
+                "path": "AuditEvent.action",
+                "mustSupport": true,
+                "mapping": [
+                    {
+                        "identity": "ehrsfm",
+                        "map": "TI.2.1.2.1#05"
+                    }
+                ]
+            },
+            {
+                "id": "AuditEvent.recorded",
+                "path": "AuditEvent.recorded",
+                "mustSupport": true,
+                "mapping": [
+                    {
+                        "identity": "ehrsfm",
+                        "map": "TI.2.1.2.1#06"
+                    }
+                ]
+            },
+            {
+                "id": "AuditEvent.authorization",
+                "path": "AuditEvent.authorization",
+                "mustSupport": true,
+                "mapping": [
+                    {
+                        "identity": "ehrsfm",
+                        "map": "TI.2.1.2.1#08"
+                    }
+                ]
+            },
+            {
+                "id": "AuditEvent.agent",
+                "path": "AuditEvent.agent",
+                "mustSupport": true
+            },
+            {
+                "id": "AuditEvent.agent.who",
+                "path": "AuditEvent.agent.who",
+                "mustSupport": true,
+                "mapping": [
+                    {
+                        "identity": "ehrsfm",
+                        "map": "TI.2.1.2.1#02 (Organization), TI.2.1.2.1#03 (Practitioner), TI.2.1.2.1#04 (Device)"
+                    }
+                ]
+            },
+            {
+                "id": "AuditEvent.agent.requestor",
+                "path": "AuditEvent.agent.requestor",
+                "mustSupport": true
+            },
+            {
+                "id": "AuditEvent.agent.location",
+                "path": "AuditEvent.agent.location",
+                "mustSupport": true,
+                "mapping": [
+                    {
+                        "identity": "ehrsfm",
+                        "map": "TI.2.1.2.1#07"
+                    }
+                ]
+            },
+            {
+                "id": "AuditEvent.agent.network[x]",
+                "path": "AuditEvent.agent.network[x]",
+                "mustSupport": true,
+                "mapping": [
+                    {
+                        "identity": "ehrsfm",
+                        "map": "TI.2.1.2.1#07"
+                    }
+                ]
+            },
+            {
+                "id": "AuditEvent.agent.authorization",
+                "path": "AuditEvent.agent.authorization",
+                "mustSupport": true,
+                "mapping": [
+                    {
+                        "identity": "ehrsfm",
+                        "map": "TI.2.1.2#01"
+                    }
+                ]
+            },
+            {
+                "id": "AuditEvent.source",
+                "path": "AuditEvent.source",
+                "mustSupport": true,
+                "mapping": [
+                    {
+                        "identity": "ehrsfm",
+                        "map": "TI.2.1.2.1#07"
+                    }
+                ]
+            },
+            {
+                "id": "AuditEvent.entity",
+                "path": "AuditEvent.entity",
+                "mustSupport": true
+            },
+            {
+                "id": "AuditEvent.entity.what",
+                "path": "AuditEvent.entity.what",
+                "mustSupport": true,
+                "mapping": [
+                    {
+                        "identity": "ehrsfm",
+                        "map": "TI.2.1.1#02, TI.2.1.2.9#09"
+                    }
+                ]
+            }
+        ]
+    }
+}

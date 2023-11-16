@@ -1,0 +1,97 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "ehrsrle-provenance",
+    "url": "http://hl7.org/fhir/uv/ehrs-rle/StructureDefinition/ehrsrle-provenance",
+    "name": "EHRSFunctionalModelRecordLifecycleEventsProvenance",
+    "title": "EHRS Functional Model - Record Lifecycle Events - Provenance",
+    "status": "draft",
+    "experimental": false,
+    "publisher": "Health Level Seven International - Electronic Health Record Work Group",
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "http://www.hl7.org/Special/committees/ehr"
+                }
+            ]
+        }
+    ],
+    "description": "Defines the elements to be supported within the Provenance resource in order to conform with the Electronic Health Record System Functional Model Record Lifecycle Event standard",
+    "jurisdiction": [
+        {
+            "coding": [
+                {
+                    "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+                    "code": "001"
+                }
+            ]
+        }
+    ],
+    "mapping": [
+        {
+            "identity": "ehrsfm",
+            "uri": "http://hl7.org/ehrs/ImplementationGuide/EHRSFMR2.1",
+            "name": "EHRS-FM R2.1"
+        }
+    ],
+    "kind": "resource",
+    "abstract": false,
+    "type": "Provenance",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Provenance",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Provenance.target",
+                "path": "Provenance.target",
+                "mustSupport": true
+            },
+            {
+                "id": "Provenance.occurred[x]",
+                "path": "Provenance.occurred[x]",
+                "mustSupport": true
+            },
+            {
+                "id": "Provenance.recorded",
+                "path": "Provenance.recorded",
+                "mustSupport": true
+            },
+            {
+                "id": "Provenance.policy",
+                "path": "Provenance.policy",
+                "mustSupport": true
+            },
+            {
+                "id": "Provenance.location",
+                "path": "Provenance.location",
+                "mustSupport": true
+            },
+            {
+                "id": "Provenance.activity",
+                "path": "Provenance.activity",
+                "mustSupport": true
+            },
+            {
+                "id": "Provenance.agent",
+                "path": "Provenance.agent",
+                "mustSupport": true
+            },
+            {
+                "id": "Provenance.agent.who",
+                "path": "Provenance.agent.who",
+                "mustSupport": true
+            },
+            {
+                "id": "Provenance.agent.onBehalfOf",
+                "path": "Provenance.agent.onBehalfOf",
+                "mustSupport": true
+            },
+            {
+                "id": "Provenance.signature",
+                "path": "Provenance.signature",
+                "mustSupport": true
+            }
+        ]
+    }
+}
