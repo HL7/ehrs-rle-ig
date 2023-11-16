@@ -1,6 +1,8 @@
 # EHRS Functional model - Record Lifecycle Events
 Split from the core FHIR specification on May 9, 2022.
 
+CI build https://build.fhir.org/ig/HL7/ehrs-rle-ig/branches/main/index.html
+
 # To build IG
 (optional)> curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o publisher.jar
 > java -jar publisher.jar -ig ig.ini
