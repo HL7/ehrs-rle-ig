@@ -16,11 +16,11 @@
   <title value="EHR and PHR System Functional Models - Record Lifecycle Events Implementation Guide"/>
   <status value="active"/>
   <experimental value="false"/>
-  <publisher value="'HL7 International / Electronic Health Records"/>
+  <publisher value="HL7 International / Electronic Health Records"/>
 	<contact>
 		<telecom>
 			<system value="url"/>
-			<value value="http://www.hl7.org/special/committees/ehr"/>
+			<value value="http://www.hl7.org/Special/committees/ehr"/>
 		</telecom>
 	</contact>
 	<description value="EHRS Functional Model - Record Lifecycle Events - FHIR Implementation Guide"/>
