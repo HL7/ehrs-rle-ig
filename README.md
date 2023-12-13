@@ -16,4 +16,4 @@ https://fhir.github.io/auto-ig-builder/builds.html
 
 # Validate FHIR
 (optional)> curl -L https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar -o validator_cli.jar
-> java -jar ~/eclipse-workspace/latest-ig-publisher/validator_cli.jar -version 5.0.0 input/examples/AuditEvent-Example-1.json
+> java -jar validator_cli.jar -version 5.0.0 input/examples/AuditEvent-Example-1.json

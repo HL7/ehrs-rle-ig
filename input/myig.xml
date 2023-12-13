@@ -11,7 +11,7 @@
     <valueCode value="ehr"/>
   </extension>
   <url value="http://hl7.org/fhir/uv/ehrs-rle/ImplementationGuide/ehrs-rle"/>
-  <version value="1.1.1"/>
+  <version value="1.1.0"/>
   <name value="EHRSFunctionalModelRecordLifecycleEventsIG"/>
   <title value="EHR and PHR System Functional Models - Record Lifecycle Events Implementation Guide"/>
   <status value="active"/>
@@ -84,13 +84,6 @@
         <code value="releaselabel"/>
       </code>
       <value value="Informative Release 1"/>
-    </parameter>
-    <parameter>
-      <code>
-        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
-        <code value="apply-wg"/>
-      </code>
-      <value value="true"/>
     </parameter>
   </definition>
 </ImplementationGuide>
