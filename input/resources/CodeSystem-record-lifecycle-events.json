@@ -3,7 +3,7 @@
     "id": "record-lifecycle-events",
     "url": "http://hl7.org/fhir/uv/ehrs-rle/CodeSystem/record-lifecycle-events",
     "name": "RecordLifecycleEvents",
-    "title": "record-lifecycle-events",
+    "title": "CodeSystem record-lifecycle-events",
     "status": "active",
     "experimental": false,
     "description": "Record Lifecycle Events CodeSystem - new events",

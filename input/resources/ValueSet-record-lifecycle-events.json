@@ -3,7 +3,7 @@
     "id": "record-lifecycle-events",
     "url": "http://hl7.org/fhir/uv/ehrs-rle/ValueSet/record-lifecycle-events",
     "name": "RecordLifecycleEvents",
-    "title": "record-lifecycle-events",
+    "title": "ValueSet record-lifecycle-events",
     "status": "active",
     "experimental": false,
     "description": "Record Lifecycle Events ValueSet",
