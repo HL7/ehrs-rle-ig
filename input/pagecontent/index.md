@@ -1,6 +1,6 @@
 <div class="dragon">
-Trying out FHIR R6 (6.0.0-ballot2). Changes:
-* AuditEvent.category -> type
+Trying out FHIR R6 (6.0.0-ballot2). Changes:<br/>
+* AuditEvent.category -> type<br/>
 * AuditEvent.code -> subtype
 </div>
 
