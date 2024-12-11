@@ -43,13 +43,13 @@
     "differential": {
         "element": [
             {
-                "id": "AuditEvent.category",
-                "path": "AuditEvent.category",
+                "id": "AuditEvent.type",
+                "path": "AuditEvent.type",
                 "mustSupport": true
             },
             {
-                "id": "AuditEvent.code",
-                "path": "AuditEvent.code",
+                "id": "AuditEvent.subtype",
+                "path": "AuditEvent.subtype",
                 "binding": {
                     "strength": "preferred",
                     "valueSet": "http://hl7.org/fhir/uv/ehrs-rle/ValueSet/record-lifecycle-events"

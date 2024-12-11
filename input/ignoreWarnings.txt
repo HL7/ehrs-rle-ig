@@ -1,16 +1,16 @@
 == Suppressed Messages ==
 
 # Example code system suggestion
-Code System URI 'http://hl7.org/ehrs/Requirements/EHRSFMR2.1' could not be found so the code cannot be validated
-
-# it is understood that this IG is profiling non normative resources
-Reference to draft item http://hl7.org/fhir/standards-status|1.0.0
-Reference to draft item http://hl7.org/fhir/hl7-work-group|1.0.0
+A definition for CodeSystem 'http://hl7.org/ehrs/Requirements/EHRSFMR2.1' could not be found, so the code cannot be validated
 
 # it is understood using jurisdiction. not clear what else to use
-Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot2
 
 # Jira ticket to add Copy and Paste - https://jira.hl7.org/browse/HTA-125
-WARNING: ValueSet/record-lifecycle-events: ValueSet.compose.include[1].concept[0]: The code 'copy' is not valid in the system http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle
-INFORMATION: ValueSet/record-lifecycle-events: ValueSet.compose.include[1].concept[0]: Unknown Code 'copy' in the system 'http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle|0.2.0'
-WARNING: ValueSet/record-lifecycle-events: ValueSet.compose.include[1].concept[1]: The code 'paste' is not valid in the system http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle
+Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+The code 'copy' is not valid in the system http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle (Unknown code 'copy' in the CodeSystem 'http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle' version '1.0.0')
+The code 'paste' is not valid in the system http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle (Unknown code 'paste' in the CodeSystem 'http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle' version '1.0.0')
+Unknown code 'copy' in the CodeSystem 'http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle' version '1.0.0'
+
+# experimental
+%which is experimental, but this structure is not labeled as experimental

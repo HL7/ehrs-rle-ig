@@ -1,0 +1,123 @@
+{
+    "resourceType" : "ImplementationGuide",
+    "id" : "hl7.fhir.uv.ehrs-rle",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode" : "informative"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger" : 1
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode" : "ehr"
+    }],
+    "url" : "http://hl7.org/fhir/uv/ehrs-rle/ImplementationGuide/hl7.fhir.uv.ehrs-rle",
+    "version" : "1.2.0",
+    "name" : "EHRSFunctionalModelRecordLifecycleEventsIG",
+    "title" : "EHR and PHR System Functional Models - Record Lifecycle Events Implementation Guide",
+    "status" : "active",
+    "experimental" : false,
+    "publisher" : "HL7 International / Electronic Health Records",
+    "contact" : [{
+      "telecom" : [{
+        "system" : "url",
+        "value" : "http://www.hl7.org/Special/committees/ehr"
+      }]
+    }],
+    "description" : "EHRS Functional Model - Record Lifecycle Events - FHIR Implementation Guide",
+    "jurisdiction" : [{
+      "coding" : [{
+        "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+        "code" : "001"
+      }]
+    }],
+    "packageId" : "hl7.fhir.uv.ehrs-rle",
+    "fhirVersion" : ["6.0.0-ballot2"],
+    "definition" : {
+      "resource" : [{
+        "reference" : {
+          "reference" : "AuditEvent/example-1"
+        },
+        "name" : "Originate/Retain Order - AuditEvent",
+        "description" : "Example for EHR-S FM R2.1 RI.1.1.1",
+        "profile" : ["http://hl7.org/fhir/uv/ehrs-rle/StructureDefinition/ehrsrle-auditevent"]
+      },
+      {
+        "reference" : {
+          "reference" : "Provenance/example-1"
+        },
+        "name" : "Originate/Retain Order - Provenance",
+        "description" : "Example for EHR-S FM R2.1 RI.1.1.1",
+        "profile" : ["http://hl7.org/fhir/uv/ehrs-rle/StructureDefinition/ehrsrle-provenance"]
+      },
+      {
+        "reference" : {
+          "reference" : "CapabilityStatement/conformance-ehrs-rle"
+        },
+        "name" : "EHRS Functional Model - Record Lifecycle Events - Capability Statement",
+        "description" : "This profile defines the expected capabilities of an ''Electronic Health Record System'' when conforming to the EHRS functional model's Record Lifecycle specification."
+      },
+      {
+        "reference" : {
+          "reference" : "CodeSystem/record-lifecycle-events"
+        },
+        "name" : "CodeSystem record-lifecycle-events",
+        "description" : "Record Lifecycle Events CodeSystem - new events"
+      },
+      {
+        "reference" : {
+          "reference" : "StructureDefinition/ehrsrle-auditevent"
+        },
+        "name" : "EHRS Functional Model - Record Lifecycle Events - AuditEvent",
+        "description" : "Defines the elements to be supported within the AuditEvent resource in order to conform with the Electronic Health Record System Functional Model Record Lifecycle Event standard"
+      },
+      {
+        "reference" : {
+          "reference" : "StructureDefinition/ehrsrle-provenance"
+        },
+        "name" : "EHRS Functional Model - Record Lifecycle Events - Provenance",
+        "description" : "Defines the elements to be supported within the Provenance resource in order to conform with the Electronic Health Record System Functional Model Record Lifecycle Event standard"
+      },
+      {
+        "reference" : {
+          "reference" : "ValueSet/record-lifecycle-events"
+        },
+        "name" : "ValueSet record-lifecycle-events",
+        "description" : "Record Lifecycle Events ValueSet"
+      }],
+      "page" : {
+        "sourceUrl" : "index.md",
+        "name" : "index.html",
+        "title" : "Home Page",
+        "generation" : "markdown",
+        "page" : [{
+          "sourceUrl" : "downloads.md",
+          "name" : "downloads.html",
+          "title" : "Downloads",
+          "generation" : "markdown"
+        },
+        {
+          "sourceUrl" : "add.md",
+          "name" : "add.html",
+          "title" : "Addenda",
+          "generation" : "markdown"
+        }]
+      },
+      "parameter" : [{
+        "code" : {
+          "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+          "code" : "copyrightyear"
+        },
+        "value" : "2022+"
+      },
+      {
+        "code" : {
+          "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+          "code" : "releaselabel"
+        },
+        "value" : "Informative Release 2"
+      }]
+    }
+  }

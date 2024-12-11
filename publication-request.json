@@ -1,10 +1,10 @@
 {
-    "package-id" : "hl7.fhir.uv.ehrs-rle",
-    "version" : "1.1.0",
-    "path" : "http://hl7.org/fhir/uv/ehrs-rle/Informative1",
-    "mode" : "milestone",
-    "status" : "informative",
-    "sequence" : "Informative Release 1",
-    "desc" : "EHRS Functional Model - Record Lifecycle Events - FHIR Implementation Guide",
-    "descmd" : "EHRS Functional Model - Record Lifecycle Events - FHIR Implementation Guide"
-  }
+  "package-id": "hl7.fhir.uv.ehrs-rle",
+  "version": "1.2.0",
+  "path": "http://hl7.org/fhir/uv/ehrs-rle/Informative2",
+  "mode": "milestone",
+  "status": "informative",
+  "sequence": "Informative Release 2",
+  "desc": "EHRS Functional Model - Record Lifecycle Events - FHIR Implementation Guide",
+  "descmd": "EHRS Functional Model - Record Lifecycle Events - FHIR Implementation Guide"
+}

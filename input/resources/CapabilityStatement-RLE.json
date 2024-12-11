@@ -28,7 +28,7 @@
       }
     ],
     "kind" : "requirements",
-    "fhirVersion" : "5.0.0",
+    "fhirVersion" : "6.0.0-ballot2",
     "format" : [
       "xml",
       "json"

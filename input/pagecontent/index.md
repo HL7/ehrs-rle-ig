@@ -1,3 +1,9 @@
+<div class="dragon">
+Trying out FHIR R6 (6.0.0-ballot2). Changes:
+* AuditEvent.category -> type
+* AuditEvent.code -> subtype
+</div>
+
 ### EHRS Functional Model - Record Lifecycle Events - FHIR Implementation Guide
 
 This implementation guide describes the expected capabilities for an Electronic Health Record System (EHR-S) that intends to adhere to the ISO/HL7 10781 Electronic 

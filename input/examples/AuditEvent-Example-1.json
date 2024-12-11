@@ -1,18 +1,16 @@
 {
     "resourceType": "AuditEvent",
     "id": "example-1",
-    "category": [
-        {
-            "coding": [
-                {
-                    "system": "http://dicom.nema.org/resources/ontology/DCM",
-                    "code": "110110",
-                    "display": "Patient Record"
-                }
-            ]
-        }
-    ],
-    "code": {
+    "type": {
+        "coding": [
+            {
+                "system": "http://dicom.nema.org/resources/ontology/DCM",
+                "code": "110110",
+                "display": "Patient Record"
+            }
+        ]
+    },
+    "subtype": [ {
         "coding": [
             {
                 "system": "http://hl7.org/ehrs/Requirements/EHRSFMR2.1",
@@ -20,7 +18,7 @@
                 "display": "Originate/Retain"
             }
         ]
-    },
+    } ],
     "action": "C",
     "recorded": "2012-10-25T22:04:27+11:00",
     "agent": [
@@ -51,7 +49,9 @@
         {
             "what": {
                 "type": "MedicationRequest",
-                "identifier": { "value": "123" },
+                "identifier": {
+                    "value": "123"
+                },
                 "display": "MedicationOrder v1"
             }
         }
