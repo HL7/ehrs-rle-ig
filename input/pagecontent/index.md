@@ -1,7 +1,10 @@
-<div class="dragon">
-Trying out FHIR R6 (6.0.0-ballot2). Changes:<br/>
-* AuditEvent.category -> type<br/>
-* AuditEvent.code -> subtype
+<div class="note-to-balloters" markdown="1">
+
+**The May 2025 ballot addresses the following:**
+
+* Changes needed for FHIR R6 (6.0.0-ballot2):
+  * AuditEvent.category -> type
+  * AuditEvent.code -> subtype
 </div>
 
 ### EHRS Functional Model - Record Lifecycle Events - FHIR Implementation Guide
