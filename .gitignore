@@ -1,18 +1,6 @@
-# Temporary folders #
-#####################
+input/examples
 input-cache
 temp
 template
 output
-
-# Don't commit this because it's so large #
-###########################################
-publisher.jar
-
-# backup files #
-################
-backup
-/_gencontinuous.bat
-/_gencontinuous.sh
-/_genonce.bat
-/_genonce.sh
+factories/log

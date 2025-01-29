@@ -1,0 +1,25 @@
+{
+    "factories-version": 1,
+    "factories": [
+        {
+            "name": "AuditEventGenerator",
+            "details" : "A simple liquid script",
+            "mode": "liquid",
+            "liquid": "factories/auditevent.liquid",
+            "data": "factories/auditevents.csv",
+            "format": "json",
+            "filename": "input/examples/AuditEvent-$counter$.json",
+            "bundle": false
+        },
+        {
+            "name": "AuditEventGenerator",
+            "details" : "A simple liquid script",
+            "mode": "liquid",
+            "liquid": "factories/provenance.liquid",
+            "data": "factories/provenance.csv",
+            "format": "json",
+            "filename": "input/examples/Provenance-$counter$.json",
+            "bundle": false
+        }
+   ]
+}

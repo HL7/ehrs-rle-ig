@@ -1,12 +1,13 @@
 {
     "resourceType": "Provenance",
-    "id": "example-1",
+    "id": "example-{{ row.counter }}",
     "target": [
         {
-            "reference": "http://example.org/MedicationRequest/example/_history/1"
+            "reference": "http://example.org/{{ entity_what_type }}/{{ entity_what_identifier_value }}"
+            "display": "{{ entity_what_display }}"
         }
     ],
-    "recorded": "2015-06-27T08:39:24+10:00",
+    "recorded": "{{ Globals.dateTime }}",
     "policy": [
         "http://acme.com/fhir/Consent/25"
     ],
@@ -22,7 +23,7 @@
     "agent": [
         {
             "who": {
-                "reference": "http://example.org/Practitioner/xcda-author"
+                "reference": "http://example.org/Practitioner/ {{ agent_who_identifier_value }}"
             }
         }
     ]

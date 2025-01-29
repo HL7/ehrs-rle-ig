@@ -1,8 +1,5 @@
 == Suppressed Messages ==
 
-# Example code system suggestion
-A definition for CodeSystem 'http://hl7.org/ehrs/Requirements/EHRSFMR2.1' could not be found, so the code cannot be validated
-
 # it is understood using jurisdiction. not clear what else to use
 Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot2
 

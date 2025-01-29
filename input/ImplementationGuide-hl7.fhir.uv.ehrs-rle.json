@@ -54,6 +54,54 @@
       },
       {
         "reference" : {
+          "reference" : "AuditEvent/example-2"
+        },
+        "name" : "Update/Amend Order - AuditEvent",
+        "description" : "Example for EHR-S FM R2.1 RI.1.1.2",
+        "profile" : ["http://hl7.org/fhir/uv/ehrs-rle/StructureDefinition/ehrsrle-auditevent"]
+      },
+      {
+        "reference" : {
+          "reference" : "Provenance/example-2"
+        },
+        "name" : "Update/Amend Order - Provenance",
+        "description" : "Example for EHR-S FM R2.1 RI.1.1.2",
+        "profile" : ["http://hl7.org/fhir/uv/ehrs-rle/StructureDefinition/ehrsrle-provenance"]
+      },
+      {
+        "reference" : {
+          "reference" : "AuditEvent/example-3"
+        },
+        "name" : "Attest Order - AuditEvent",
+        "description" : "Example for EHR-S FM R2.1 RI.1.1.4",
+        "profile" : ["http://hl7.org/fhir/uv/ehrs-rle/StructureDefinition/ehrsrle-auditevent"]
+      },
+      {
+        "reference" : {
+          "reference" : "Provenance/example-3"
+        },
+        "name" : "Attest Order - Provenance",
+        "description" : "Example for EHR-S FM R2.1 RI.1.1.4",
+        "profile" : ["http://hl7.org/fhir/uv/ehrs-rle/StructureDefinition/ehrsrle-provenance"]
+      },
+      {
+        "reference" : {
+          "reference" : "AuditEvent/example-4"
+        },
+        "name" : "Access/View Order - AuditEvent",
+        "description" : "Example for EHR-S FM R2.1 RI.1.1.5",
+        "profile" : ["http://hl7.org/fhir/uv/ehrs-rle/StructureDefinition/ehrsrle-auditevent"]
+      },
+      {
+        "reference" : {
+          "reference" : "Provenance/example-4"
+        },
+        "name" : "Access/View Order - Provenance",
+        "description" : "Example for EHR-S FM R2.1 RI.1.1.5",
+        "profile" : ["http://hl7.org/fhir/uv/ehrs-rle/StructureDefinition/ehrsrle-provenance"]
+      },
+      {
+        "reference" : {
           "reference" : "CapabilityStatement/conformance-ehrs-rle"
         },
         "name" : "EHRS Functional Model - Record Lifecycle Events - Capability Statement",
@@ -118,6 +166,13 @@
           "code" : "releaselabel"
         },
         "value" : "Informative Release 2"
+      },
+      {
+        "code" : {
+          "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+          "code" : "test-data-factories"
+        },
+        "value" : "factories/factories.json"
       }]
     }
   }

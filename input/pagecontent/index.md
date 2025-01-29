@@ -745,7 +745,7 @@ The following table shows the FHIR Resources and applicable Attributes captured 
   <tr>
     <td rowspan="2">Record Entry ID</td>
     <td>Provenance</td>
-    <td>Target : Reference(Any) 0..*</td>
+    <td>target : Reference(Any) 0..*</td>
   </tr>
   <tr>
     <td>AuditEvent.entity : 0..*</td>

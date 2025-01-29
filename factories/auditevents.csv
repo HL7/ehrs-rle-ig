@@ -1,0 +1,5 @@
+subtype_display,subtype_code,action,recorded,agent_who_identifier_value,source_observer_display,entity_what_type,entity_what_identifier_value,entity_what_display
+Originate/Retain Order,originate,C,,Grahame,Grahame’s apple,MedicationRequest,123,Medication Order v1
+Update/Amend Order,amend,U,,Michael,Michael’s linux laptop,MedicationRequest,126,Medication Order v2
+Attest Order,attest,U,,Gary,Gary’s apple,MedicationRequest,130,Medication Order v3
+Access/View Order,access,R,,John,John’s workstation,MedicationRequest,131,Medication Order v3

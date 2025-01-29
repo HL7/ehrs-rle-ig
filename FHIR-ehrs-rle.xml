@@ -8,12 +8,18 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
+<artifact id="AuditEvent/example-4" key="AuditEvent-example-4" name="Access/View Order - AuditEvent"/>
+<artifact id="Provenance/example-4" key="Provenance-example-4" name="Access/View Order - Provenance"/>
+<artifact id="AuditEvent/example-3" key="AuditEvent-example-3" name="Attest Order - AuditEvent"/>
+<artifact id="Provenance/example-3" key="Provenance-example-3" name="Attest Order - Provenance"/>
 <artifact id="CodeSystem/record-lifecycle-events" key="CodeSystem-record-lifecycle-events" name="CodeSystem record-lifecycle-events"/>
 <artifact id="StructureDefinition/ehrsrle-auditevent" key="EHRSFunctionalModelRecordLifecycleEventsAuditEvent" name="EHRS Functional Model - Record Lifecycle Events - AuditEvent"/>
 <artifact id="CapabilityStatement/conformance-ehrs-rle" key="EHRSFunctionalModelRecordLifecycleEventsCapabilityStatement" name="EHRS Functional Model - Record Lifecycle Events - Capability Statement"/>
 <artifact id="StructureDefinition/ehrsrle-provenance" key="EHRSFunctionalModelRecordLifecycleEventsProvenance" name="EHRS Functional Model - Record Lifecycle Events - Provenance"/>
 <artifact id="AuditEvent/example-1" key="AuditEvent-example-1" name="Originate/Retain Order - AuditEvent"/>
 <artifact id="Provenance/example-1" key="Provenance-example-1" name="Originate/Retain Order - Provenance"/>
+<artifact id="AuditEvent/example-2" key="AuditEvent-example-2" name="Update/Amend Order - AuditEvent"/>
+<artifact id="Provenance/example-2" key="Provenance-example-2" name="Update/Amend Order - Provenance"/>
 <artifact id="ValueSet/record-lifecycle-events" key="ValueSet-record-lifecycle-events" name="ValueSet record-lifecycle-events"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>

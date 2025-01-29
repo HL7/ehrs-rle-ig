@@ -31,8 +31,8 @@
     "mapping": [
         {
             "identity": "ehrsfm",
-            "uri": "http://hl7.org/ehrs/ImplementationGuide/EHRSFMR2.1",
-            "name": "EHRS-FM R2.1"
+            "uri": "http://hl7.org/ehrs/ImplementationGuide/EHRSFMR2",
+            "name": "EHRS-FM R2"
         }
     ],
     "kind": "resource",
