@@ -163,6 +163,13 @@
       {
         "code" : {
           "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+          "code" : "path-resource"
+        },
+        "value" : "input/examples"
+      },	
+      {
+        "code" : {
+          "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
           "code" : "releaselabel"
         },
         "value" : "Informative Release 2"

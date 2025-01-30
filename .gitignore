@@ -3,4 +3,3 @@ temp
 template
 output
 factories/log
-input/examples/*.json
